@@ -1,42 +1,43 @@
+<!DOCTYPE html>
 <html>
 <head>
-<title>카카오톡 버튼 있는 메시지 전송하기</title>
-<script id="javascript-sdk" src="https://developers.kakao.com/sdk/js/kakao.min.js">
-  </script>
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width"/>
+<title>신속복권방</title>
+<script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
 </head>
 <body>
-<p><strong>아래 카카오톡 아이콘을 눌러 전송하세요</strong></p>
-<a id="kakao-link-btn" href="javascript:sendLink()">
-  <img
-    src="http://dn.api1.kage.kakao.co.kr/14/dn/btqa9B90G1b/GESkkYjKCwJdYOkLvIBKZ0/o.jpg"/>
+<a id="kakao-link-btn" href="javascript:;">
+<img src="//developers.kakao.com/assets/img/about/logos/kakaolink/kakaolink_btn_medium.png"/>
 </a>
-<script type="text/javascript">
- Kakao.init('fa3ee17a9c108bbec383bd87fa48f210');
- Kakao.Link.createDefaultButton({
+<script type='text/javascript'>
+  //<![CDATA[
+    Kakao.init('fa3ee17a9c108bbec383bd87fa48f210');
+
+    Kakao.Link.createDefaultButton({
       container: '#kakao-link-btn',
       objectType: 'feed',
       content: {
-        title: '신속복권방',
-        description: '주문번호와 배당 확인하실수 있습니다',
-        imageUrl:https://i.ibb.co/6tBDg04/image.jpg',
+        title: '신속복권방 주문 배당표',
+        description: '주문번호와 배당표 확인가능합니다',
+        imageUrl: 'https://i.ibb.co/6tBDg04/image.jpg',
         link: {
           mobileWebUrl: 'https://www.betman.co.kr/main/mainPage/gamebuy/gameSlipIFR.do?gmId=G101&gmTs=240102&isIFR=Y',
-          webUrl: 'https://www.betman.co.kr/main/mainPage/gamebuy/gameSlipIFR.do?gmId=G101&gmTs=240102&isIFR=Y',
-        },
+          webUrl: 'https://www.betman.co.kr/main/mainPage/gamebuy/gameSlipIFR.do?gmId=G101&gmTs=240102&isIFR=Y'
+        }
       },
-       buttons: [
+      buttons: [
         {
-          title: '승부식 주문배당표',
+          title: '버튼 타이틀',
           link: {
             mobileWebUrl: 'https://www.betman.co.kr/main/mainPage/gamebuy/gameSlipIFR.do?gmId=G101&gmTs=240102&isIFR=Y',
-            webUrl: 'https://www.betman.co.kr/main/mainPage/gamebuy/gameSlipIFR.do?gmId=G101&gmTs=240102&isIFR=Y',
-          },
-        },
-      ],
-    })
-  }
+            webUrl: 'https://www.betman.co.kr/main/mainPage/gamebuy/gameSlipIFR.do?gmId=G101&gmTs=240102&isIFR=Y'
+          }
+        }
+      ]
+    });
+  //]]>
 </script>
-<!-- www.blackcats4567.com -->
-<!-- When clicking on the image/button, the address should be placed in Kakao Developers' Application> Platform> Web to be displayed successfully when clicked. -->
-  </body>
+</body>
 </html>
